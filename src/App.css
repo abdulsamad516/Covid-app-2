@@ -3,3 +3,25 @@
   float: leftart
   ;
 }
+
+table{
+  text-align: center;
+  align-items: center;
+  border: solid 5px red;
+  margin-left: 400px;
+}
+
+.h1head{
+  text-align: center;
+}
+
+table , th ,td{
+  border: solid 2px red;
+}
+td.even {
+  color: #d81d1d;}
+
+  
+  tr:hover {
+  background-color: #c3e6e5;}
+

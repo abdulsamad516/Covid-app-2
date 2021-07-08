@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
-import axios from 'axios';
 import Covid from "./Covid";
+import {Provider} from 'react-redux';
 
 
 export default class PersonList extends React.Component {
@@ -9,13 +9,7 @@ export default class PersonList extends React.Component {
     persons: []
   }
 
-  componentDidMount(i) {
-    axios.get(`https://api.covidtracking.com/v1/states/current.json`)
-      .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
-      })
-  }
+  
 
   render() {
     return (

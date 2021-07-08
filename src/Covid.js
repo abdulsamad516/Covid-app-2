@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import './App.css';
+
 
 export default class Covid extends Component {
   state = {
@@ -16,12 +18,13 @@ export default class Covid extends Component {
     return (
       <div className="container mt-5">
         <div className="row">
-          <h1 className="display-4 text-center my-5">Covid-19 summary</h1>
-          <table className="table  table-dark table-striped">
+          <h1 className="h1head display-4 text-center my-5">Covid-19 summary</h1>
+          <div className='tablealign'>
+          <table  className="table table-dark  table-primary">
             <thead>
               <tr>
-                <th scope="col">State</th>
-                <th scope="col">Positive</th>
+                <th className='colorli' scope="col">State</th>
+                <th className='colorli' scope="col">Positive</th>
                 <th scope="col">Total Test Results</th>
                 <th scope="col">Hospitalized currently</th>
                 <th scope="col">Date modified</th>
@@ -34,7 +37,7 @@ export default class Covid extends Component {
                 return (
                   <tr>
                     <th scope="row">{e.state}</th>
-                    <td>{e.positive}</td>
+                    <td className="table-primary">{e.positive}</td>
                     <td>{e.totalTestResults}</td>
                     <td>{e.hospitalizedCurrently}</td>
                     <td>{e.dateModified}</td>
@@ -45,6 +48,7 @@ export default class Covid extends Component {
               })}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     );
